@@ -15,7 +15,7 @@ def connect_to_winbox(address):
     """Attempt to connect to Winbox with the provided address."""
     try:
         winbox_path = r"C:\Users\Yoni\Desktop\winbox64.exe"  # Path to Winbox
-        subprocess.Popen([winbox_path, address, "admin", "ip6576pi"])
+        subprocess.Popen([winbox_path, address, "---", "---"])
         print(f"Trying to connect to Winbox with address: {address}...")
     except Exception as e:
         print(f"Failed to connect to Winbox with address {address}. Error: {e}")
@@ -57,7 +57,7 @@ def connect_to_vpn(vpn_name, username, password, domain):
 
 def open_browser():
     """Open incognito browsers to access managed devices."""
-    urls = ["http://10.0.0.250", "http://192.168.100.1"]
+    urls = ["http://------", "http://-------"]
     chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
     for url in urls:
         print(f"Opening incognito browser to access {url}...")
@@ -121,8 +121,8 @@ def home():
             update_vpn_address(vpn_name, ip_address)
 
             # Step 3: Connect to VPN
-            username = "iPcomVPN"
-            password = "ip576dr"
+            username = "----"
+            password = "----"
             connect_to_vpn(vpn_name, username, password, ip_address)
 
             # Step 4: Open browsers
